@@ -1,0 +1,26 @@
+{
+  "name": "taria-pkg",
+  "version": "1.0.0",
+  "description": "A package for all the other packages that Taria will use",
+  "main": "logic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LardianGH/taria-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LardianGH/taria-bot/issues"
+  },
+  "homepage": "https://github.com/LardianGH/taria-bot#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "dotenv": "^8.1.0",
+    "file-system": "^2.2.2",
+    "moment": "^2.24.0",
+    "node-spotify-api": "^1.1.1"
+  }
+}
