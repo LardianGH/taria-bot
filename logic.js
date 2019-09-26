@@ -19,6 +19,7 @@ var spotifyKey = new Spotify(keys.spotify);
 var band = function(artist) {
   if (artist.trim() === "") {
     console.log("Taria says: No artist selected")
+    reRun()
   }else {
   axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp").then(
     function(response) {
@@ -31,6 +32,7 @@ var band = function(artist) {
         console.log("(" + venue + ") - " + location + " on " + date)
         }}
         else{console.log("Taria says: There are no upcoming tours by this artist")}
+        reRun()
     })}
 }
 
@@ -50,6 +52,7 @@ spotifyKey.search({ type: 'track', query: song, limit: 1 })
   console.log("Taria says: " + songName + ", released by: " + band)
   console.log("Part of the " + albumName + " album")
   console.log("link:", link)
+  reRun()
 })
 .catch(function(err) {
   console.log(err)
@@ -59,6 +62,7 @@ spotifyKey.search({ type: 'track', query: song, limit: 1 })
 var movie = function(movieName) {
   if (movieName.trim() === "") {
     console.log('Taria says: No movie selected')
+    reRun()
   } else {
   //builds the url
   var movieUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=ded7cf4";
@@ -85,64 +89,15 @@ var plot = info.Plot
       console.log(rating2.Source + " rating: " + rating2.Value)
       console.log("----Plot----")
       console.log(plot)
+      reRun()
+  })}}
 
-  })}
-}
-//end all the functions
-    inquirer.prompt([
-      {
-        type: "list",
-        name: "task",
-        message: "What would you like to search for?",
-        choices: ["band", "music", "movie", "do"]
-      },
-      {
-        type: "input",
-        name: "input",
-        message: "Search:"
-      },
-    ]).then(function(input) {
-//switch case
-  switch (input.task) {
-      case "band": {
-
-    var artist = input.input
-
-    band(artist)
-
-    break;
-    }
-
-      case "music": {
-
-    var song = input.input
-
-    music(song)
-      
-    break;
-    }
-
-      case "movie": { // Movie search
-    //takes the input and joins all instances in the array with a hyphen
-    var movieName = input.input
-
-    movie(movieName)
-   
-    break;
-    }
-
-    case "do": {
-      file.readFile('./random.txt', 'utf8', function(err, data){
-        if (err){ 
-          return console.log(err);
-        }
-        var dataArr = data.split(',');
-
-        var doInstructions = dataArr[1]
-        switch (dataArr[0]) {
+  var switchItems = function(choices, input) {
+    //switch case
+      switch (choices.task) {
           case "band": {
     
-        var artist = doInstructions
+        var artist = input.input
     
         band(artist)
     
@@ -151,7 +106,7 @@ var plot = info.Plot
     
           case "music": {
     
-        var song = doInstructions
+        var song = input.input
     
         music(song)
           
@@ -160,19 +115,88 @@ var plot = info.Plot
     
           case "movie": { // Movie search
         //takes the input and joins all instances in the array with a hyphen
-        var movieName = doInstructions
+        var movieName = input.input
     
         movie(movieName)
        
         break;
-        }}
-      });
-    }
+        }
+    
+        case "do": {
+          file.readFile('./random.txt', 'utf8', function(err, data){
+            if (err){ 
+              return console.log(err);
+            }
+            var dataArr = data.split(',');
+    
+            var doInstructions = dataArr[1]
+            switch (dataArr[0]) {
+              case "band": {
+        
+            var artist = doInstructions
+        
+            band(artist)
+        
+            break;
+            }
+        
+              case "music": {
+        
+            var song = doInstructions
+        
+            music(song)
+              
+            break;
+            }
+        
+              case "movie": { // Movie search
+            //takes the input and joins all instances in the array with a hyphen
+            var movieName = doInstructions
+        
+            movie(movieName)
+           
+            break;
+            }}
+          });
+          break;
+        }
+    
+        case "exit": {
+          console.log("Taria says: Goodbye")
+          break;
+        }
+    
+          default: { // If none of the available calls are selected
+        console.log("Taria says: I'm sorry, I didn't catch that.")
+        break;
+        }
+      }
+    //end switch case
+          }
 
-      default: { // If none of the available calls are selected
-    console.log("Taria says: I'm sorry, I didn't catch that.")
-    break;
-    }
+//end all the functions
+var reRun = function() {
+    inquirer.prompt([
+      {
+        type: "list",
+        name: "task",
+        message: "What would you like to search for?",
+        choices: ["band", "music", "movie", "do", "exit"]
+      }])
+      .then(function(choices){
+        if ((choices.task !== "do") && (choices.task !== "exit")) {
+        inquirer.prompt([
+      {
+        type: "input",
+        name: "input",
+        message: "Search:"
+      }
+    ]).then(function(input){
+  switchItems(choices, input)
+    })
+  } else {
+    switchItems(choices)
   }
-//end switch case
-});
+  })
+}
+reRun()
