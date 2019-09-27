@@ -13,12 +13,40 @@ var file = require('file-system');
 
 var inquirer = require("inquirer");
 
+var fs = require("fs");
+
 var spotifyKey = new Spotify(keys.spotify);
 
+var log
+
+var querDiv = "\n~~~Query~~~\n"
+
+var resDiv = "~~~Response~~~\n"
+
+var timeStamp = (+ new Date())
+
+ //Start new
+ fs.appendFile("log.txt", "(((Start new session)))---" + timeStamp, function(err) {
+  if (err) throw err;
+});
+//end Start new
+
 //all the functions
+var logger = function(log) {
+   //logging
+     fs.appendFile("log.txt", resDiv + log, function(err) {
+       if (err) throw err;
+     });
+     //end logging
+}
+
 var band = function(artist) {
+  var concerts = []
+  var concert
   if (artist.trim() === "") {
-    console.log("Taria says: No artist selected")
+    log = "Taria says: No artist selected"
+    console.log(log)
+        logger(log)
     reRun()
   }else {
   axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp").then(
@@ -29,17 +57,23 @@ var band = function(artist) {
         var venue = response.data[i].venue.name
         var location = response.data[i].venue.city + ", " + response.data[i].venue.region
         var date = moment(response.data[i].datetime).format("MM/DD/YYYY")
-        console.log("(" + venue + ") - " + location + " on " + date)
-        }}
-        else{console.log("Taria says: There are no upcoming tours by this artist")}
+        concert = `(${venue}) - ${location} on ${date}`
+        concerts.push(concert)
+        }
+        log = concerts.join("\n")
+      }
+        else{log = "Taria says: There are no upcoming tours by this artist"}
+        console.log(log)
+        logger(log)
         reRun()
     })}
+    
 }
 
 var music = function(song) {
   if (song.trim() === "") {
     console.log('Taria says: Default song: The "Sign"')
-    song = "The Sign"
+    song = "Ace of Base The Sign"
   }
 spotifyKey.search({ type: 'track', query: song, limit: 1 })
 
@@ -49,9 +83,11 @@ spotifyKey.search({ type: 'track', query: song, limit: 1 })
   var link = (songData.external_urls.spotify) //Link to song
   var songName = (songData.name) //Song name
   var albumName = (songData.album.name) //album name
-  console.log("Taria says: " + songName + ", released by: " + band)
-  console.log("Part of the " + albumName + " album")
-  console.log("link:", link)
+log = (`${songName}, released by: ${band}
+Part of the ${albumName} album
+link: ${link}`)
+  console.log("Taria says: " + log)
+  logger(log)
   reRun()
 })
 .catch(function(err) {
@@ -61,7 +97,9 @@ spotifyKey.search({ type: 'track', query: song, limit: 1 })
 
 var movie = function(movieName) {
   if (movieName.trim() === "") {
-    console.log('Taria says: No movie selected')
+    log = 'Taria says: No movie selected'
+    console.log(log)
+    logger(log)
     reRun()
   } else {
   //builds the url
@@ -78,17 +116,19 @@ var cast = info.Actors
 var rating1 = info.Ratings[0]
 var rating2 = info.Ratings[1]
 var plot = info.Plot
-      console.log("Taria says: " + title);
-      console.log("----Info----")
-      console.log("Was released in: " + year);
-      console.log("Produced by: " + country)
-      console.log("Languages avialable: " + lang)
-      console.log("Cast: " + cast)
-      console.log("----Ratings----")
-      console.log(rating1.Source + " rating: " + rating1.Value)
-      console.log(rating2.Source + " rating: " + rating2.Value)
-      console.log("----Plot----")
-      console.log(plot)
+log = `Taria says: ${title}
+----Info----
+Was released in: ${year}
+Produced by: ${country}
+Languages avialable: ${lang}
+Cast: ${cast}
+----Ratings----
+${rating1.Source} rating: ${rating1.Value}
+${rating2.Source} rating: ${rating2.Value}
+----Plot----
+${plot}`
+console.log(log)
+logger(log)
       reRun()
   })}}
 
@@ -197,6 +237,14 @@ var reRun = function() {
   } else {
     switchItems(choices)
   }
+  //logging
+  var showData = (`Task: ${choices.task}
+`)
+  
+  fs.appendFile("log.txt", querDiv + showData, function(err) {
+    if (err) throw err;
+  });
+  //end logging
   })
 }
 reRun()

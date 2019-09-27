@@ -1,0 +1,40 @@
+(((Start new session)))---1569556397207
+~~~Query~~~
+Task: band
+~~~Response~~~
+Taria says: No artist selected
+~~~Query~~~
+Task: band
+~~~Response~~~
+(Spectrum Center) - Charlotte, NC on 09/25/2019
+(Kentucky Exposition Center) - Louisville, KY on 09/28/2019
+(VyStar Veterans Memorial Arena) - Jacksonville, FL on 10/01/2019
+(Austin City Limits) - Austin, TX on 10/04/2019
+(Intrust Bank Arena) - Wichita, KS on 10/07/2019
+(Austin City Limits) - Austin, TX on 10/11/2019
+(Exit 111 Festival) - Tennessee, Manchester on 10/13/2019
+(Pinnacle Bank Arena) - Lincoln, NE on 10/15/2019
+(Jalisco Stadium) - Guadalajara,  on 10/18/2019
+(Not In This Lifetime Tour) - Tijuana,  on 10/20/2019
+(Chesapeake Energy Arena) - Oklahoma City, OK on 10/23/2019
+(City Park) - New Orleans, LA on 10/25/2019
+(Vivint Smart Home Arena) - Salt Lake City, UT on 10/29/2019
+(THE COLOSSEUM AT CAESARS PALACE) - Las Vegas, NV on 11/01/2019
+(THE COLOSSEUM AT CAESARS PALACE) - Las Vegas, NV on 11/02/2019
+~~~Query~~~
+Task: music
+~~~Response~~~
+High Definition, released by: Waterparks
+Part of the High Definition album
+link: https://open.spotify.com/track/2Pi7PgyV0CsV2E7uAfx7gY
+~~~Query~~~
+Task: do
+~~~Response~~~
+I Want It That Way, released by: Backstreet Boys
+Part of the The Hits--Chapter One album
+link: https://open.spotify.com/track/6e40mgJiCid5HRAGrbpGA6
+~~~Query~~~
+Task: exit
+(((Start new session)))---1569556477386
+~~~Query~~~
+Task: exit
