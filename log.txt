@@ -1,32 +1,62 @@
-(((Start new session)))---1569556397207
+(((Start new session)))---1569644510211
 ~~~Query~~~
 Task: band
 ~~~Response~~~
-Taria says: No artist selected
+(Buckhead Theatre) - Atlanta, GA on 11/15/2019
+(Music Farm) - Charleston, SC on 11/16/2019
+(The Orpheum Tampa) - Tampa, FL on 11/17/2019
+(The Underground - Fillmore Charlotte) - Charlotte, NC on 11/19/2019
+(Theatre of The Living Arts) - Philadelphia, PA on 11/20/2019
+(Reverb) - Reading, PA on 11/22/2019
+(Baltimore Soundstage) - Baltimore, MD on 11/23/2019
+(Webster Hall) - New York, NY on 11/25/2019
+(Paradise Rock Club) - Boston, MA on 11/26/2019
+(Vic Theatre) - Chicago, IL on 11/29/2019
+(Rex Theater) - Pittsburgh, PA on 11/30/2019
+(Bogart's) - Cincinnati, OH on 12/01/2019
+(Saint Andrew’s Hall) - Detroit, MI on 12/03/2019
+(House of Blues Cleveland) - Cleveland, OH on 12/04/2019
+(Varsity Theater) - Minneapolis, MN on 12/06/2019
+(The Truman) - Kansas City, MO on 12/07/2019
+(Summit Music Hall) - Denver, CO on 12/08/2019
+(The Depot) - Salt Lake City, UT on 12/10/2019
+(El Corazon) - Seattle, WA on 12/13/2019
+(Wonder Ballroom) - Portland, OR on 12/15/2019
+(The Regency Ballroom) - San Francisco, CA on 12/16/2019
+(House of Blues Anaheim) - Anaheim, CA on 12/17/2019
+(Crescent Ballroom) - Phoenix, AZ on 12/18/2019
+(Aztec Theatre) - San Antonio, TX on 12/20/2019
+(House of Blues Dallas) - Dallas, TX on 12/21/2019
+(Warehouse Live) - Houston, TX on 12/23/2019
+(The Academy, Middle Abbey Street) - Dublin,  on 01/24/2020
+(Waterfront Studio) - Belfast,  on 01/25/2020
+(SWG3 Studio Warehouse) - Glasgow,  on 01/26/2020
+(O2 Institute) - Birmingham,  on 01/27/2020
+(Manchester Academy 2) - Manchester,  on 01/29/2020
+(Manchester Academy 2) - Manchester,  on 01/30/2020
+(Electric Ballroom) - London,  on 02/01/2020
+(Electric Ballroom) - London,  on 02/02/2020
+(Luxor) - Cologne,  on 02/04/2020
+(Feierwerk) - Munich,  on 02/05/2020
+(Melkweg) - Amsterdam,  on 02/07/2020
+(LOGO) - Hamburg,  on 02/08/2020
+(Pumpehuset) - Copenhagen,  on 02/09/2020
+(Parkteatret Scene) - Oslo,  on 02/11/2020
+(Fryshuset Arenan) - Stockholm,  on 02/12/2020
 ~~~Query~~~
-Task: band
+Task: movie
 ~~~Response~~~
-(Spectrum Center) - Charlotte, NC on 09/25/2019
-(Kentucky Exposition Center) - Louisville, KY on 09/28/2019
-(VyStar Veterans Memorial Arena) - Jacksonville, FL on 10/01/2019
-(Austin City Limits) - Austin, TX on 10/04/2019
-(Intrust Bank Arena) - Wichita, KS on 10/07/2019
-(Austin City Limits) - Austin, TX on 10/11/2019
-(Exit 111 Festival) - Tennessee, Manchester on 10/13/2019
-(Pinnacle Bank Arena) - Lincoln, NE on 10/15/2019
-(Jalisco Stadium) - Guadalajara,  on 10/18/2019
-(Not In This Lifetime Tour) - Tijuana,  on 10/20/2019
-(Chesapeake Energy Arena) - Oklahoma City, OK on 10/23/2019
-(City Park) - New Orleans, LA on 10/25/2019
-(Vivint Smart Home Arena) - Salt Lake City, UT on 10/29/2019
-(THE COLOSSEUM AT CAESARS PALACE) - Las Vegas, NV on 11/01/2019
-(THE COLOSSEUM AT CAESARS PALACE) - Las Vegas, NV on 11/02/2019
-~~~Query~~~
-Task: music
-~~~Response~~~
-High Definition, released by: Waterparks
-Part of the High Definition album
-link: https://open.spotify.com/track/2Pi7PgyV0CsV2E7uAfx7gY
+Taria says: It
+----Info----
+Was released in: 2017
+Produced by: USA, Canada
+Languages avialable: English
+Cast: Jaeden Martell, Jeremy Ray Taylor, Sophia Lillis, Finn Wolfhard
+----Ratings----
+Internet Movie Database rating: 7.4/10
+Rotten Tomatoes rating: 86%
+----Plot----
+In the summer of 1989, a group of bullied kids band together to destroy a shape-shifting monster, which disguises itself as a clown and preys on the children of Derry, their small Maine town.
 ~~~Query~~~
 Task: do
 ~~~Response~~~
@@ -34,7 +64,79 @@ I Want It That Way, released by: Backstreet Boys
 Part of the The Hits--Chapter One album
 link: https://open.spotify.com/track/6e40mgJiCid5HRAGrbpGA6
 ~~~Query~~~
+Task: music
+~~~Response~~~
+Feel Good Inc., released by: Gorillaz
+Part of the Demon Days album
+link: https://open.spotify.com/track/0d28khcov6AiegSCpG5TuT
+~~~Query~~~
+Task: music
+~~~Response~~~
+New Thing, released by: Bleak
+Part of the Therapy. album
+link: https://open.spotify.com/track/01ZG11jgYkVxqBYsh8lazS
+~~~Query~~~
 Task: exit
-(((Start new session)))---1569556477386
+(((Start new session)))---1570766750895
+~~~Query~~~
+Task: music
+~~~Response~~~
+High Definition, released by: Waterparks
+Part of the High Definition album
+link: https://open.spotify.com/track/2Pi7PgyV0CsV2E7uAfx7gY(((Start new session)))---1572299881824(((Start new session)))---1576700267508
+~~~Query~~~
+Task: movie
+~~~Response~~~
+Taria says: Shrek
+----Info----
+Was released in: 2001
+Produced by: USA
+Languages avialable: English
+Cast: Mike Myers, Eddie Murphy, Cameron Diaz, John Lithgow
+----Ratings----
+Internet Movie Database rating: 7.8/10
+Rotten Tomatoes rating: 88%
+----Plot----
+A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.
+~~~Query~~~
+Task: band
+~~~Response~~~
+(Crescent Ballroom) - Phoenix, AZ on 12/18/2019
+(Aztec Theatre) - San Antonio, TX on 12/20/2019
+(House of Blues Dallas) - Dallas, TX on 12/21/2019
+(Warehouse Live) - Houston, TX on 12/23/2019
+(The Academy, Middle Abbey Street) - Dublin,  on 01/24/2020
+(Waterfront Studio) - Belfast,  on 01/25/2020
+(SWG3 Studio Warehouse) - Glasgow,  on 01/26/2020
+(O2 Institute) - Birmingham,  on 01/27/2020
+(Manchester Academy 2) - Manchester,  on 01/29/2020
+(Manchester Academy 2) - Manchester,  on 01/30/2020
+(Electric Ballroom) - London,  on 02/01/2020
+(Electric Ballroom) - London,  on 02/02/2020
+(Luxor) - Cologne,  on 02/04/2020
+(Feierwerk) - Munich,  on 02/05/2020
+(Melkweg) - Amsterdam,  on 02/07/2020
+(LOGO) - Hamburg,  on 02/08/2020
+(Pumpehuset) - Copenhagen,  on 02/09/2020
+(Parkteatret Scene) - Oslo,  on 02/11/2020
+(Fryshuset Arenan) - Stockholm,  on 02/12/2020
+~~~Query~~~
+Task: music
+~~~Response~~~
+Peel, released by: Bleak
+Part of the Therapy. album
+link: https://open.spotify.com/track/674cFcuY7UMTMzHt9lxNci
+~~~Query~~~
+Task: do
+~~~Response~~~
+I Want It That Way, released by: Backstreet Boys
+Part of the The Hits--Chapter One album
+link: https://open.spotify.com/track/6e40mgJiCid5HRAGrbpGA6
+~~~Query~~~
+Task: do
+~~~Response~~~
+I Want It That Way, released by: Backstreet Boys
+Part of the The Hits--Chapter One album
+link: https://open.spotify.com/track/6e40mgJiCid5HRAGrbpGA6
 ~~~Query~~~
 Task: exit
